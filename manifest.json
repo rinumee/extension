@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Telegram Sessiyalar",
+  "version": "1.0",
+  "description": "Telegram aktiv sessiyalarni ko'rish",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://*.telegram.org/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["tdweb.esm.js", "tdweb.wasm"],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": false
+    }
+  ],
+ "content_security_policy": {
+  "extension_pages": "script-src 'self' https://unpkg.com; object-src 'self'"
+},
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
